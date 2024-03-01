@@ -1,0 +1,46 @@
+<!DOCTYPE html> <!--Pré corpo todo pronto, só abrir com exclamação (!)-->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!---serve para escala em diferentes dispositivos-->
+    <title>Portólio</title>
+    <link rel="stylesheet" href="/styles/style.css"> <!--para linkar com o arquivo CSS. REL serve para informar a relação (stylesheet=folha de estilo). HREF semelhante ao source-->
+</head>
+<body>
+    <header class="cabecalho">  <!--cabeçalho-->
+        <nav class="cabecalho__menu"> <!-- tag NAV semântica representa uma seção da página que aponta para outras com links-->
+            <a class="cabecalho__menu__link" href="exFigma.html">Home</a> <!-- href para retornar à aba principal-->
+            <a class="cabecalho__menu__link" href="about.html">Sobre mim</a> <!-- href para ir à página 'about'-->
+            <a class="cabecalho__menu__link" href="curriculo.html">Currículo</a>
+        </nav>
+    </header>
+    <main class="apresentacao"> <!--conteúdo principal da página-->
+        <section class="apresentacao__conteudo"> <!--agrupar os elementos filhos-->
+            <h1 class="apresentacao__conteudo__titulo">Eleve seu negócio digital a outro nível <strong class="titulo-destaque"> com um Front-end de qualidade!</strong></h1> <!--</strong> para deixar em negrito/destacado-->
+            <!--Declarar CLASSE no HTML para ser puxado no CSS. Invoca no CSS através do ponto(.)-->
+            <p class="apresentacao__conteudo__texto">Olá! Sou Ilda Teresinha, desenvolvedora Front-end com especialidade em <strong>React, HTML e CSS</strong>. Ajudo pequenos negócios e designers a colocarem em prática boas ideias. 
+                Vamos conversar?</p>
+            <div class="apresentacao__conteudo__links"> <!-- a <div> é frequentemente utilizada quando precisamos agrupar elementos sem usar as tags semânticas do HTML. 
+                Isso acontece porque a <div> não tem valor semântico. Portanto, não significa nada para os navegadores e mecanismos de pesquisa.-->
+                <h2 class="apresentacao__conteudo__links__subtitulo">Acesse minhas redes:</h2>
+                <a class="apresentacao__conteudo__links__subtitulo__link" href="https://github.com/willianscholl">
+                    <img src="/assets/github.png"> Github</a> <!--tag <a> serve como âncora, botão com link para site externo.... tem que constar o HREF, como se fosse um source
+                contendo o hiperlink-->
+                <a class="apresentacao__conteudo__links__subtitulo__link" href="https://www.linkedin.com/">
+                    <img src="/assets/linkedin.png"> Linkedin</a>
+                <a class="apresentacao__conteudo__links__subtitulo__link" href="https://www.twitch.tv/bt0tv">
+                    <img src="/assets/twitch.png"> Twitch</a>
+                <a class="apresentacao__conteudo__links__subtitulo__link" href="https://twitter.com/SchollWillian">
+                    <img src="/assets/twitter-novo.png"> Twitter</a>
+                <a class="apresentacao__conteudo__links__subtitulo__link" href="https://instagram.com/willianscholl">
+                    <img src="/assets/instagram.png"> Instagram</a>
+            </div>
+        </section>
+        <img class="apresentacao__imagem" src="/assets/Imagem.png" alt="Imagem do Figma">
+    </main> 
+    <footer class="rodape"><!--rodapé-->
+        <p>Desenvolvido por Alura</p>
+    </footer> 
+</body>
+</html>
+

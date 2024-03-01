@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap'); /*importar fontes do Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&display=swap');
+
+/* CTRL+K+C FAZ O SELECIONADO VIRAR COMENTARIO AUTOMATICAMENTE */
+
+:root { /*definir variaveis no CSS. Uso de :root + chaves + definir a variável com o --*/
+    --cor-primaria: #2C3639;
+    --cor-secundaria: #DCD7C9;
+    --cor-terciaria: #A27B5C;
+
+    --fonte-primaria: "Krona One", sans-serif;
+    --fonte-secundaria: 'Montserrat',sans-serif;
+}
+
+*{ 
+    margin: 0;
+    padding: 0;
+} /* asterisco seleciona todo o conteudo do html
+    Isso é um Reset CSS, usado para tirar os padrões de espaçamento já pré-definidos... podem ser usados mais tags*/
+
+body {
+    /* height: 100vh; altura da tela = 100% da altura do viewport(dispositivo). Como tem bastante conteúdo na página, não faz mais necessário ter o ViewHeight */
+    box-sizing: border-box; /*garante que a estrutura 'filho' não exceda a estrutura 'pai', com relação à largura e altura da página*/
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+.cabecalho{
+    padding: 2% 0% 0% 17%; /*4 valores no padding = Superior, direita, baixo e esquerda. 17% pra ficar na mesma linha da classe 'apresentacao'*/
+}
+
+.cabecalho__menu{
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__menu__link{
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+}
+
+.apresentacao{
+    /* margin: 10% 17%; primeiro valor é a margem vertical, segundo é a margem horizontal */
+    padding: 5% 17%; /*primeiro valor = padding vertical, segundo = pading horizontal*/
+    display: flex; /*posicionar blocos lado a lado*/
+    align-items: center; /*alinhar no centro em relação ao item de maior altura*/
+    justify-content: space-between; /*espaçamento entre SECTION e IMG*/
+    gap: 82px;
+}
+
+.apresentacao__conteudo{ /*FLEXBOX SEMPRE É COLOCADO NA TAG CONTÂINER, QUE ENGLOBA O RESTO*/
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /*espaçamento entre os elementos filhos*/
+    text-align: justify;
+}
+
+.apresentacao__conteudo__titulo{
+    font-size: 2.25rem; /*Unidade REM serve para deixar a página responsiva ao tamanho. Por exemplo ao selecionar fonte 'grande' ou 'pequena' no próprio navegador.
+    Se fosse com pixel, não mudaria. Conversão: 16px = 1rem.*/
+    font-family: var(--fonte-primaria); /*pegar isso do diretório escrito no site do Google Fonts, de onde foi retirado o @Import */
+}
+
+
+.titulo-destaque{ /*invocar classe*/
+    color: var(--cor-terciaria);
+}
+
+.apresentacao__conteudo__texto{
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+}
+.apresentacao__conteudo__links{
+    display: flex; /*sempre que usar flexbox, tem que usar o display:flex*/
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+.apresentacao__conteudo__links__subtitulo{
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.apresentacao__conteudo__links__subtitulo__link{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    background-color: var(--cor-primaria);
+    border: 2px solid var(--cor-terciaria); /*largura da borda, o solid pra borda ser inteiriça e no final a cor*/
+    width: 55%; /*largura do 'botão*/
+    text-align: center;
+    border-radius: 10px; /*Arredondar a borda*/
+    font-size: 1.5rem;
+    padding: 21.5px 0; /*o primeiro valor é do padding vertical, o segundo é do horizontal. No caso, ZERO. Quando quiser o mesmo espaçamento pra todos lados, só usar 1 valor*/
+    text-decoration: none; /*por padrão, o 'âncora' já vem sublinhdo. Dessa forma, tira-se todas as decorações*/
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+}
+
+
+.apresentacao__conteudo__links__subtitulo__link:visited{ /*:visited serve para personalizar elemento já visitado*/
+    color: rgb(97, 0, 0);
+}
+
+.apresentacao__conteudo__links__subtitulo__link:hover{ /*:hover pra quando o mouse passar por cima do link (pode ser usado em elementos sem ser link), mudar cor/letra/ o que quiser estilizar*/
+    background-color: #081f00;
+    text-decoration: underline;
+    padding: 3%; /*efeito semelhante a uma animação nos botões*/
+}
+
+.apresentacao__imagem{
+    width: 40%; /*a porcentagem acompanha o espaço do elemento pai. No caso, o pai da <img> é a <main>. Os 50% são relativos ao espaço que ocupa*/
+}
+.rodape{
+    background-color: var(--cor-terciaria);
+    color: var(--cor-primaria);
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 24px;
+}
+
+
+/*conteúdo do arquivo currículo*/
+
+
+.principal{
+    display: flex;
+    align-items: center;
+    padding: 5% 17%;
+    gap: 100px;
+}
+
+.principal__section{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.125rem;
+    font-weight: 400;
+    text-align: justify;
+    text-indent: 40px;
+}
+
+
+.principal__strong{
+    color: rgb(4, 0, 255);
+} /*---------------------------------*/
+
+@media (max-width: 1300px) /*@media para mudar a disposição dos elementos, a depender do tamanho da tela (width). Condicional, só é aplicado se oq estiver nos parenteses for verdadaeiro*/
+    {
+        .cabecalho{
+            padding: 8% 0% 0% 0%;
+        }
+        .cabecalho__menu{
+            justify-content: center;
+        }
+
+        .apresentacao{ /*nao precisa declarar o display:flex aqui pois já foi declarado na classe apresentação de cima*/
+            flex-direction: column-reverse; /*inverter a disposição dos elementos*/
+            padding: 5%;
+        }
+        .apresentacao__conteudo{
+            width: auto; /*auto (ou + 100%) pega todo o espaço que conseguir, seguindo a largura da tag pai. Serve para retirar o espaçamento dos lados*/
+        }
+    }
